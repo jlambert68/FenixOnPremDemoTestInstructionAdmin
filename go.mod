@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/jlambert68/FenixGrpcApi v0.0.0-20231211151850-8b38fdb85885
-	github.com/jlambert68/FenixTestInstructionsAdminShared v0.0.0-20231214074523-d70482aae017
+	github.com/jlambert68/FenixTestInstructionsAdminShared v0.0.0-20231214143910-271138caf7a3
 )
 
 require (

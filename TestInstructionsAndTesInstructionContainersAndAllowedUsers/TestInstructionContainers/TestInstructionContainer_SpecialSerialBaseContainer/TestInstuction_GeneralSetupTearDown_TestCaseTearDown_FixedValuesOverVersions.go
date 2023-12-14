@@ -3,5 +3,5 @@ package TestInstructionContainer_SpecialSerialBaseContainer
 import "github.com/jlambert68/FenixTestInstructionsAdminShared/TypeAndStructs"
 
 const (
-	TestInstructionContainerUUID_SC_SpecialSerialBaseContainer TypeAndStructs.OriginalElementUUIDType = "d27305ac-9e4a-46f3-859a-3a6f60867a64"
+	TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer TypeAndStructs.OriginalElementUUIDType = "66b85646-6caa-4830-9423-3464b2e87920"
 )

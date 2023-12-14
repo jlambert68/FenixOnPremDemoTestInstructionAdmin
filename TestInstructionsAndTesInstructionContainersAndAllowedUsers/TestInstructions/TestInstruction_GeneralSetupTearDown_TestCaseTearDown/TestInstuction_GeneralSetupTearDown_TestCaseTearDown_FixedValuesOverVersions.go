@@ -3,5 +3,5 @@ package TestInstruction_GeneralSetupTearDown_TestCaseTearDown
 import "github.com/jlambert68/FenixTestInstructionsAdminShared/TypeAndStructs"
 
 const (
-	TestInstructionUUID_SC_TestCaseTearDown TypeAndStructs.OriginalElementUUIDType = "89959686-1599-4a5f-bcf6-5b427cbdce93"
+	TestInstructionUUID_OnPremDemo_TestCaseTearDown TypeAndStructs.OriginalElementUUIDType = "5c5c919b-1ef8-44db-9b08-4bd3dee182e6"
 )
