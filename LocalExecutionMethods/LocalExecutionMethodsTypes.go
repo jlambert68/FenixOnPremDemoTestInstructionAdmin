@@ -1,7 +1,7 @@
 package LocalExecutionMethods
 
 import (
-	"FenixOnPremDemoTestInstructionAdmin/LocalExecutionMethods/FangEngineClassesAndMethods"
+	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/LocalExecutionMethods/FangEngineClassesAndMethods"
 )
 
 // MethodsForLocalExecutionsStruct
