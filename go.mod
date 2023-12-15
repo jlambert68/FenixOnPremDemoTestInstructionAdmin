@@ -1,4 +1,4 @@
-module FenixOnPremDemoTestInstructionAdmin
+module github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin
 
 go 1.21
 
