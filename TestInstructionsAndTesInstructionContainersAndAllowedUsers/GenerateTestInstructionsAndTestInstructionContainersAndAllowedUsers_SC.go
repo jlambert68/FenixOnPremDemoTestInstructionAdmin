@@ -2,9 +2,6 @@ package TestInstructionsAndTesInstructionContainersAndAllowedUsers
 
 import (
 	"fmt"
-	fenixExecutionWorkerGrpcApi "github.com/jlambert68/FenixGrpcApi/FenixExecutionServer/fenixExecutionWorkerGrpcApi/go_grpc_api"
-	fenixTestCaseBuilderServerGrpcApi "github.com/jlambert68/FenixGrpcApi/FenixTestCaseBuilderServer/fenixTestCaseBuilderServerGrpcApi/go_grpc_api"
-	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/DomainData"
 	testInstructionContainer_SpecialSerialBaseContainer "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructionContainers/TestInstructionContainer_SpecialSerialBaseContainer"
 	testInstructionContainer_SpecialSerialBaseContainer_1_0 "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructionContainers/TestInstructionContainer_SpecialSerialBaseContainer/version_1_0"
 	generalSetupTearDown_TestCaseSetUp "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseSetUp"
@@ -21,7 +18,7 @@ import (
 
 var TestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo *TestInstructionAndTestInstuctionContainerTypes.TestInstructionsAndTestInstructionsContainersStruct
 
-func GenerateTestInstructions_OnPremDemo() {
+func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo() {
 
 	var err error
 
@@ -154,77 +151,11 @@ func GenerateTestInstructions_OnPremDemo() {
 
 	// Calculate hashes that is included in the Supported TestInstructions, TestInstructionContainers and Allowed Users message
 	err = shared_code.CalculateTestInstructionAndTestInstructionContainerAndUsersMessageHashes(
-		TestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo) //,
-	//		PushToTempStore,
-	//		PullFromTempStore)
+		TestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo)
 
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
-	// Worker Server - gRPC-message
-
-	// Convert supported TestInstructions, TestInstructionContainers and Allowed Users message into a gRPC-Worker version of the message
-	var supportedTestInstructionsAndTestInstructionContainersAndAllowedUsersGrpcWorkerMessage *fenixExecutionWorkerGrpcApi.SupportedTestInstructionsAndTestInstructionContainersAndAllowedUsersMessage
-	supportedTestInstructionsAndTestInstructionContainersAndAllowedUsersGrpcWorkerMessage, err = shared_code.
-		GenerateTestInstructionAndTestInstructionContainerAndUserGrpcWorkerMessage(string(DomainData.DomainUUID_OnPremDemo),
-			TestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-
-	// Convert back supported TestInstructions, TestInstructionContainers and Allowed Users message from a gRPC-Worker version of the message and check correctness of Hashes
-	var testInstructionsAndTestInstructionContainersFromGrpcWorkerMessage *TestInstructionAndTestInstuctionContainerTypes.TestInstructionsAndTestInstructionsContainersStruct
-	testInstructionsAndTestInstructionContainersFromGrpcWorkerMessage, err = shared_code.
-		GenerateStandardFromGrpcWorkerMessageForTestInstructionsAndUsers(
-			supportedTestInstructionsAndTestInstructionContainersAndAllowedUsersGrpcWorkerMessage)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-
-	// Verify recreated Hashes from gRPC-Worker-message
-	var errorSliceWorker []error
-	errorSliceWorker = shared_code.VerifyTestInstructionAndTestInstructionContainerAndUsersMessageHashes(
-		testInstructionsAndTestInstructionContainersFromGrpcWorkerMessage)
-	if errorSliceWorker != nil {
-		for _, errFromWorker := range errorSliceWorker {
-			fmt.Println(errFromWorker)
-		}
-		os.Exit(1)
-	}
-
-	// Builder Server - gRPC-message
-	// Convert supported TestInstructions, TestInstructionContainers and Allowed Users message into a gRPC-Builder version of the message
-	var supportedTestInstructionsAndTestInstructionContainersAndAllowedUsersGrpcBuilderMessage *fenixTestCaseBuilderServerGrpcApi.SupportedTestInstructionsAndTestInstructionContainersAndAllowedUsersMessage
-	supportedTestInstructionsAndTestInstructionContainersAndAllowedUsersGrpcBuilderMessage, err = shared_code.
-		GenerateTestInstructionAndTestInstructionContainerAndUserGrpcBuilderMessage(string(DomainData.DomainUUID_OnPremDemo),
-			TestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-
-	// Convert back supported TestInstructions, TestInstructionContainers and Allowed Users message from a gRPC-Builder version of the message and check correctness of Hashes
-	var testInstructionsAndTestInstructionContainersFromGrpcBuilderMessage *TestInstructionAndTestInstuctionContainerTypes.TestInstructionsAndTestInstructionsContainersStruct
-	testInstructionsAndTestInstructionContainersFromGrpcBuilderMessage, err = shared_code.
-		GenerateStandardFromGrpcBuilderMessageForTestInstructionsAndUsers(
-			supportedTestInstructionsAndTestInstructionContainersAndAllowedUsersGrpcBuilderMessage)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-
-	// Verify recreated Hashes from gRPC-Builder-message
-	var errorSliceBuilder []error
-	errorSliceBuilder = shared_code.VerifyTestInstructionAndTestInstructionContainerAndUsersMessageHashes(
-		testInstructionsAndTestInstructionContainersFromGrpcBuilderMessage)
-	if errorSliceBuilder != nil {
-		for _, errFromBuilder := range errorSliceBuilder {
-			fmt.Println(errFromBuilder)
-		}
-		os.Exit(1)
-	}
 }
