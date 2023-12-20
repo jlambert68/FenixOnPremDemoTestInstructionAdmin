@@ -2,6 +2,7 @@ package TestInstructionsAndTesInstructionContainersAndAllowedUsers
 
 import (
 	"fmt"
+	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/DomainData"
 	testInstructionContainer_SpecialSerialBaseContainer "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructionContainers/TestInstructionContainer_SpecialSerialBaseContainer"
 	testInstructionContainer_SpecialSerialBaseContainer_1_0 "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructionContainers/TestInstructionContainer_SpecialSerialBaseContainer/version_1_0"
 	generalSetupTearDown_TestCaseSetUp "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseSetUp"
@@ -97,6 +98,11 @@ func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremD
 		TestInstructionsAndTestInstructionsContainersAndUsersMessageHash: shared_code.InitialValueBeforeHashed,
 		MessageCreationTimeStamp: time.Now(),
 		ForceNewBaseLineForTestInstructionsAndTestInstructionContainers: false,
+		ConnectorsDomain: TestInstructionAndTestInstuctionContainerTypes.ConnectorsDomainStruct{
+			ConnectorsDomainUUID: string(DomainData.DomainUUID_OnPremDemo),
+			ConnectorsDomainName: string(DomainData.DomainName_OnPremDemo),
+			ConnectorsDomainHash: shared_code.InitialValueBeforeHashed,
+		},
 	}
 
 	// Generate TestInstructionContainers
