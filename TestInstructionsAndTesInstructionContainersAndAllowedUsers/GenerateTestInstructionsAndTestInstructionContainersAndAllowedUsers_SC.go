@@ -99,8 +99,8 @@ func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremD
 		MessageCreationTimeStamp: time.Now(),
 		ForceNewBaseLineForTestInstructionsAndTestInstructionContainers: false,
 		ConnectorsDomain: TestInstructionAndTestInstuctionContainerTypes.ConnectorsDomainStruct{
-			ConnectorsDomainUUID: string(DomainData.DomainUUID_OnPremDemo),
-			ConnectorsDomainName: string(DomainData.DomainName_OnPremDemo),
+			ConnectorsDomainUUID: DomainData.DomainUUID_OnPremDemo,
+			ConnectorsDomainName: DomainData.DomainName_OnPremDemo,
 			ConnectorsDomainHash: shared_code.InitialValueBeforeHashed,
 		},
 	}
