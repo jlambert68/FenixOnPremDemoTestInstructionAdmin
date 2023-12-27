@@ -38,7 +38,8 @@ func GenerateAndVerifyRPCMessages() {
 
 	// Verify recreated Hashes from gRPC-Worker-message
 	var errorSliceWorker []error
-	errorSliceWorker = shared_code.VerifyTestInstructionAndTestInstructionContainerAndUsersMessageHashes(
+	errorSliceWorker = shared_code.VerifyTestInstructionAndTestInstructionContainerAndUsersMessageHashesAndDomain(
+		DomainData.DomainUUID_OnPremDemo,
 		testInstructionsAndTestInstructionContainersFromGrpcWorkerMessage)
 	if errorSliceWorker != nil {
 		for _, errFromWorker := range errorSliceWorker {
@@ -70,7 +71,8 @@ func GenerateAndVerifyRPCMessages() {
 
 	// Verify recreated Hashes from gRPC-Builder-message
 	var errorSliceBuilder []error
-	errorSliceBuilder = shared_code.VerifyTestInstructionAndTestInstructionContainerAndUsersMessageHashes(
+	errorSliceBuilder = shared_code.VerifyTestInstructionAndTestInstructionContainerAndUsersMessageHashesAndDomain(
+		DomainData.DomainUUID_OnPremDemo,
 		testInstructionsAndTestInstructionContainersFromGrpcBuilderMessage)
 	if errorSliceBuilder != nil {
 		for _, errFromBuilder := range errorSliceBuilder {
