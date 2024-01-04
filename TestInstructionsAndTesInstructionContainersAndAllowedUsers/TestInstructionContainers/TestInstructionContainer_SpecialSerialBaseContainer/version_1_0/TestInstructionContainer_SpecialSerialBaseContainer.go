@@ -16,11 +16,11 @@ import (
 const (
 	// *** TestInstructionContainer 'SpecialSerialBaseContainer'
 	TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer                        TypeAndStructs.OriginalElementUUIDType          = TestInstructionContainer_SpecialSerialBaseContainer.TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer
-	TestInstructionContainerName_OnPremDemo_SpecialSerialBaseContainer                        TypeAndStructs.TestInstructionContainerNameType = "Empty serial processed TestInstructionsContainer"
+	TestInstructionContainerName_OnPremDemo_SpecialSerialBaseContainer                        TypeAndStructs.TestInstructionContainerNameType = "Serial Special TestInstructionsContainer"
 	TestInstructionContainerTypeUUID_OnPremDemo_SpecialSerialBaseContainer                                                                    = TestInstructionContainers.TestInstructionContainerTypeUUID_OnPremDemo_BaseContainers
 	TestInstructionContainerTypeName_OnPremDemo_SpecialSerialBaseContainer                                                                    = TestInstructionContainers.TestInstructionContainerTypeNameType_OnPremDemo_BaseContainers
-	TestInstructionContainerDescription_OnPremDemo_SpecialSerialBaseContainer                 string                                          = "Children of this container is processed in serial"
-	TestInstructionContainerMouseOverText_OnPremDemo_SpecialSerialBaseContainer               string                                          = "Children of this container is processed in serial"
+	TestInstructionContainerDescription_OnPremDemo_SpecialSerialBaseContainer                 string                                          = "Children of this special container is processed in serial"
+	TestInstructionContainerMouseOverText_OnPremDemo_SpecialSerialBaseContainer               string                                          = "Children of this special container is processed in serial"
 	TestInstructionContainerDeprecated_OnPremDemo_SpecialSerialBaseContainer                  bool                                            = false
 	TestInstructionContainerEnabled_OnPremDemo_SpecialSerialBaseContainer                     bool                                            = true
 	TestInstructionContainerMajorVersionNumber_OnPremDemo_SpecialSerialBaseContainer          int                                             = 1
@@ -97,7 +97,7 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 		ImmatureElementName:      TypeAndStructs.OriginalElementNameType(TestInstructionContainerName_OnPremDemo_SpecialSerialBaseContainer),
 		PreviousElementUUID:      TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
 		NextElementUUID:          TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
-		FirstChildElementUUID:    Bonds.Bond_B10_BondUuid,
+		FirstChildElementUUID:    Bonds.Bond_B11fx_BondUuid,
 		ParentElementUUID:        TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
 		TestCaseModelElementType: TestCaseModelElementTypes.TestCaseModelElementType_TIC,
 		OriginalElementUUID:      TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
@@ -140,7 +140,7 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseSetUp.TestInstructionUUID_OnPremDemo_TestCaseSetUp].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionName),
 		PreviousElementUUID: Bonds.Bond_B11fx_BondUuid,
-		NextElementUUID:     Bonds.Bond_B10_BondUuid,
+		NextElementUUID:     Bonds.Bond_B12_BondUuid,
 		FirstChildElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseSetUp.TestInstructionUUID_OnPremDemo_TestCaseSetUp].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
@@ -160,7 +160,7 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 		DomainUUID:          DomainData.DomainUUID_OnPremDemo,
 		DomainName:          DomainData.DomainName_OnPremDemo,
 		ImmatureElementUUID: Bonds.Bond_B12_BondUuid,
-		ImmatureElementName: TypeAndStructs.OriginalElementNameType(Bonds.Bond_B0_BondName),
+		ImmatureElementName: TypeAndStructs.OriginalElementNameType(Bonds.Bond_B12_BondName),
 		PreviousElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseSetUp.TestInstructionUUID_OnPremDemo_TestCaseSetUp].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
@@ -169,7 +169,7 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
 		FirstChildElementUUID:    Bonds.Bond_B12_BondUuid,
 		ParentElementUUID:        TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
-		TestCaseModelElementType: TestCaseModelElementTypes.TestCaseModelElementType_B10,
+		TestCaseModelElementType: TestCaseModelElementTypes.TestCaseModelElementType_B12,
 		OriginalElementUUID:      Bonds.Bond_B12_BondUuid,
 		TopImmatureElementUUID:   TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
 		IsTopElement:             false,
@@ -188,7 +188,9 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionName),
 		PreviousElementUUID: Bonds.Bond_B12_BondUuid,
-		NextElementUUID:     Bonds.Bond_B11lx_BondUuid,
+		NextElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
+			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown].
+			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
 		FirstChildElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
@@ -208,14 +210,14 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 		DomainUUID:          DomainData.DomainUUID_OnPremDemo,
 		DomainName:          DomainData.DomainName_OnPremDemo,
 		ImmatureElementUUID: Bonds.Bond_B11lx_BondUuid,
-		ImmatureElementName: TypeAndStructs.OriginalElementNameType(Bonds.Bond_B0_BondName),
+		ImmatureElementName: TypeAndStructs.OriginalElementNameType(Bonds.Bond_B11lx_BondName),
 		PreviousElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
 		NextElementUUID:          Bonds.Bond_B11lx_BondUuid,
 		FirstChildElementUUID:    Bonds.Bond_B11lx_BondUuid,
 		ParentElementUUID:        TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
-		TestCaseModelElementType: TestCaseModelElementTypes.TestCaseModelElementType_B10,
+		TestCaseModelElementType: TestCaseModelElementTypes.TestCaseModelElementType_B11lx,
 		OriginalElementUUID:      Bonds.Bond_B11lx_BondUuid,
 		TopImmatureElementUUID:   TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
 		IsTopElement:             false,
