@@ -249,9 +249,7 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionName),
 		PreviousElementUUID: Bonds.Bond_B12_BondUuid,
-		NextElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
-			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown].
-			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
+		NextElementUUID:     Bonds.Bond_B11lx_BondUuid,
 		FirstChildElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
