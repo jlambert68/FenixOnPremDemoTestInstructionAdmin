@@ -23,7 +23,7 @@ const (
 	TestInstructionDescription_OnPremDemo_TestCaseSetUp        string                                 = "Initiate _OnPremDemos execution engine to be able to execute TestInstructionsMap"
 	TestInstructionMouseOverText_OnPremDemo_TestCaseSetUp      string                                 = "Initiate _OnPremDemos execution engine to be able to execute TestInstructionsMap"
 	TestInstructionDeprecated_OnPremDemo_TestCaseSetUp         bool                                   = false
-	TestInstructionEnabled_OnPremDemo_TestCaseSetUp            bool                                   = true
+	TestInstructionEnabled_OnPremDemo_TestCaseSetUp            bool                                   = false // Is not shown up in tree of available building blocks, but can be used in pre-create TestInstructionContainers
 	TestInstructionMajorVersionNumber_OnPremDemo_TestCaseSetUp int                                    = 1
 	TestInstructionMinorVersionNumber_OnPremDemo_TestCaseSetUp int                                    = 1
 	TestInstructionColor_OnPremDemo_TestCaseSetUp              TypeAndStructs.ColorType               = "#00ff00AA"

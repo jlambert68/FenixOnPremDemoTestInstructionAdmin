@@ -22,7 +22,7 @@ const (
 	TestInstructionTypeName_OnPremDemo_TestCaseSetUp                                                  = TestInstructions.TestInstructionTypeName_OnPremDemo_GeneralSetUpTearDown
 	TestInstructionDescription_OnPremDemo_TestCaseSetUp        string                                 = "Initiate _OnPremDemos execution engine to be able to execute TestInstructionsMap"
 	TestInstructionMouseOverText_OnPremDemo_TestCaseSetUp      string                                 = "Initiate _OnPremDemos execution engine to be able to execute TestInstructionsMap"
-	TestInstructionDeprecated_OnPremDemo_TestCaseSetUp         bool                                   = true
+	TestInstructionDeprecated_OnPremDemo_TestCaseSetUp         bool                                   = false
 	TestInstructionEnabled_OnPremDemo_TestCaseSetUp            bool                                   = true
 	TestInstructionMajorVersionNumber_OnPremDemo_TestCaseSetUp int                                    = 1
 	TestInstructionMinorVersionNumber_OnPremDemo_TestCaseSetUp int                                    = 0
