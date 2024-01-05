@@ -36,7 +36,7 @@ const (
 	TestInstructionDropZoneName_OnPremDemo_TestCaseSetUp_ExpectsToSucceed        TypeAndStructs.DropZoneNameType = "TestCaseSetUp_ExpectsToSucceed"
 	TestInstructionDropZoneDescription_OnPremDemo_TestCaseSetUp_ExpectsToSucceed string                          = "Presets attribute that TestInstruction expects to succeed in its execution"
 	TestInstructionDropZoneMouseOver_OnPremDemo_TestCaseSetUp_ExpectsToSucceed   string                          = "Presets attribute that TestInstruction expects to succeed in its execution"
-	TestInstructionDropZoneColor_OnPremDemo_TestCaseSetUp_ExpectsToSucceed       TypeAndStructs.ColorType        = "#00000000"
+	TestInstructionDropZoneColor_OnPremDemo_TestCaseSetUp_ExpectsToSucceed       TypeAndStructs.ColorType        = "#000000FF"
 
 	// Attribute - 'ExpectedToBePassed'
 	TestInstructionAttributeUUID_OnPremDemo_TestCaseSetUp_ExpectedToBePassed               TypeAndStructs.TestInstructionAttributeUUIDType = "818218d0-3fd4-4dd1-8033-7e7c9ff3143f" //TestInstructionAttributeUUID_OnPremDemo_ExpectedToBePassed

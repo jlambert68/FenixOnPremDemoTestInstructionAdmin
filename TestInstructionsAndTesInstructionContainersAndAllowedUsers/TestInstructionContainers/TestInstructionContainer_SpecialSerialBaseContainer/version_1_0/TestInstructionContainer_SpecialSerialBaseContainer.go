@@ -167,7 +167,7 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 	}
 	TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel = append(TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel, ImmatureElementModel_TIC)
 
-	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'B11fx_1' in 'TIC(B11fx_1-TI_1-B12-TI_2-B11lx)'
+	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'B11fx_1' in 'TIC(B11fx_1-TIx_1-B12-TI_2-B11lx)'
 	var ImmatureElementModel_B11fx_1 *TypeAndStructs.ImmatureElementModelMessageStruct
 	ImmatureElementModel_B11fx_1 = &TypeAndStructs.ImmatureElementModelMessageStruct{
 		DomainUUID:          DomainData.DomainUUID_OnPremDemo,
@@ -189,9 +189,9 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 	}
 	TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel = append(TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel, ImmatureElementModel_B11fx_1)
 
-	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'TI_1' in 'TIC(B11fx_1-TI_1-B12-TI_2-B11lx)'
-	var ImmatureElementModel_TI_1 *TypeAndStructs.ImmatureElementModelMessageStruct
-	ImmatureElementModel_TI_1 = &TypeAndStructs.ImmatureElementModelMessageStruct{
+	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'TI_1' in 'TIC(B11fx_1-TIx_1-B12-TI_2-B11lx)'
+	var ImmatureElementModel_TIx_1 *TypeAndStructs.ImmatureElementModelMessageStruct
+	ImmatureElementModel_TIx_1 = &TypeAndStructs.ImmatureElementModelMessageStruct{
 		DomainUUID: DomainData.DomainUUID_OnPremDemo,
 		DomainName: DomainData.DomainName_OnPremDemo,
 		ImmatureElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
@@ -206,16 +206,16 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseSetUp.TestInstructionUUID_OnPremDemo_TestCaseSetUp].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
 		ParentElementUUID:        TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
-		TestCaseModelElementType: TestCaseModelElementTypes.TestCaseModelElementType_TI,
+		TestCaseModelElementType: TestCaseModelElementTypes.TestCaseModelElementType_TIx,
 		OriginalElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseSetUp.TestInstructionUUID_OnPremDemo_TestCaseSetUp].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
 		TopImmatureElementUUID: TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
 		IsTopElement:           false,
 	}
-	TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel = append(TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel, ImmatureElementModel_TI_1)
+	TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel = append(TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel, ImmatureElementModel_TIx_1)
 
-	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'B12' in 'TIC(B11fx_1-TI_1-B12-TI_2-B11lx)'
+	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'B12' in 'TIC(B11fx_1-TIx_1-B12-TI_2-B11lx)'
 	var ImmatureElementModel_B12 *TypeAndStructs.ImmatureElementModelMessageStruct
 	ImmatureElementModel_B12 = &TypeAndStructs.ImmatureElementModelMessageStruct{
 		DomainUUID:          DomainData.DomainUUID_OnPremDemo,
@@ -237,7 +237,7 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 	}
 	TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel = append(TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel, ImmatureElementModel_B12)
 
-	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'TI_2' in 'TIC(B11fx_1-TI_1-B12-TI_2-B11lx)'
+	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'TI_2' in 'TIC(B11fx_1-TIx_1-B12-TI_2-B11lx)'
 	var ImmatureElementModel_TI_2 *TypeAndStructs.ImmatureElementModelMessageStruct
 	ImmatureElementModel_TI_2 = &TypeAndStructs.ImmatureElementModelMessageStruct{
 		DomainUUID: DomainData.DomainUUID_OnPremDemo,
@@ -265,7 +265,7 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 	}
 	TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel = append(TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureElementModel, ImmatureElementModel_TI_2)
 
-	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'B10' in 'TIC(B11fx_1-TI_1-B12-TI_2-B11lx)'
+	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'B10' in 'TIC(B11fx_1-TIx_1-B12-TI_2-B11lx)'
 	var ImmatureElementModel_B11lx *TypeAndStructs.ImmatureElementModelMessageStruct
 	ImmatureElementModel_B11lx = &TypeAndStructs.ImmatureElementModelMessageStruct{
 		DomainUUID:          DomainData.DomainUUID_OnPremDemo,

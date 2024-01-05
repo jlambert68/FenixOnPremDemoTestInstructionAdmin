@@ -36,7 +36,7 @@ const (
 	TestInstructionDropZoneName_OnPremDemo_TestCaseTearDown_ExpectsToSucceed        TypeAndStructs.DropZoneNameType = "TestCaseTearDown_ExpectsToSucceed"
 	TestInstructionDropZoneDescription_OnPremDemo_TestCaseTearDown_ExpectsToSucceed string                          = "Presets attribute that TestInstruction expects to succeed in its execution"
 	TestInstructionDropZoneMouseOver_OnPremDemo_TestCaseTearDown_ExpectsToSucceed   string                          = "Presets attribute that TestInstruction expects to succeed in its execution"
-	TestInstructionDropZoneColor_OnPremDemo_TestCaseTearDown_ExpectsToSucceed       TypeAndStructs.ColorType        = "#00000000"
+	TestInstructionDropZoneColor_OnPremDemo_TestCaseTearDown_ExpectsToSucceed       TypeAndStructs.ColorType        = "#000000AA"
 
 	// Attribute - 'ExpectedToBePassed'
 	TestInstructionAttributeUUID_OnPremDemo_TestCaseTearDown_ExpectedToBePassed               TypeAndStructs.TestInstructionAttributeUUIDType = "737b77d1-f468-4f07-acef-bdc087d71fe0" // TODO fix so they use the same UUID, Can't bu done now because UUID is key in Attrubutes-table in DB .TestInstructionAttributeUUID_OnPremDemo_ExpectedToBePassed
