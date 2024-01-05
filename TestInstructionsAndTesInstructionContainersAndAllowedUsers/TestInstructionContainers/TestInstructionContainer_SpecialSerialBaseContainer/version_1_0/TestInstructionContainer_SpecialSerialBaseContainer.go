@@ -5,7 +5,9 @@ import (
 	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructionContainers"
 	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructionContainers/TestInstructionContainer_SpecialSerialBaseContainer"
 	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseSetUp"
+	TI_TestCaseSetUp "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseSetUp/version_1_1"
 	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseTearDown"
+	TI_TestCaseTearDown "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseTearDown/version_1_0"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/Bonds"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/Domains"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/TestCaseModelElementTypes"
@@ -31,8 +33,17 @@ const (
 	TCRuleSwap_OnPremDemo_SpecialSerialBaseContainer                                          TypeAndStructs.TCRuleSwapType                   = "TCRuleSwap012"
 	TestInstructionContainerCreatingTimeStamp                                                 TypeAndStructs.UpdatedTimeStampType             = "2023-11-28 14:00:00"
 
-	// *** DropZone ***
-	// No DropZone for 'SpecialSerialBaseContainer'
+	// *** DropZone *** 'TestInstructionsInTIC_ExpectsToSucceed'
+	TestInstructionDropZoneUUID_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed         TypeAndStructs.DropZoneUUIDType = "fdfa0f19-16df-4ce2-88bf-88acbf1db48d"
+	TestInstructionDropZoneName_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed         TypeAndStructs.DropZoneNameType = "AllTestInstructionsInTIC_ExpectsToSucceed"
+	TestInstructionDropZoneDescription_OnPremDemo_TTestInstructionsInTIC_ExpectsToSucceed string                          = "Presets attribute that TestInstruction expects to succeed in its execution"
+	TestInstructionDropZoneMouseOver_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed    string                          = "Presets attribute that TestInstruction expects to succeed in its execution"
+	TestInstructionDropZoneColor_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed        TypeAndStructs.ColorType        = "#FF0000FF"
+
+	// Attribute - 'ExpectedToBePassed'
+	TestInstructionAttributeActionCommand_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed      TypeAndStructs.AttributeActionCommandType = Domains.AttributeActionCommand_USE_DROPZONE_VALUE_FOR_ATTRIBUTE
+	TestInstructionAttributeValueAsStringValue_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed TypeAndStructs.AttributeValueAsStringType = Domains.TestInstructionAttributeValueAsStringValue_TRUE
+	TestInstructionAttributeValueUUID_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed          TypeAndStructs.AttributeValueUUIDType     = Domains.TestInstructionAttributeValueUUID_TRUE
 )
 
 // TestInstructionContainer_OnPremDemo_SpecialSerialBase
@@ -86,7 +97,57 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 	}
 
 	// ImmatureTestInstructionContainerMessage - 'SpecialSerialBaseContainer'
-	// No DropZone for 'SpecialSerialBaseContainer'
+	// *** DropZone *** 'TestInstructionsInTIC_ExpectsToSucceed'
+	// ImmatureTestInstructionInformation  - DropZone: TestCaseSetUp_ExpectsToSucceed, Attr: ExpectedToBePassed
+	var TestInstruction_OnPremDemo_TestCaseSetUp_ExpectedToBePassed *TypeAndStructs.ImmatureTestInstructionContainerMessageStruct
+	TestInstruction_OnPremDemo_TestCaseSetUp_ExpectedToBePassed = &TypeAndStructs.ImmatureTestInstructionContainerMessageStruct{
+		DomainUUID:                   DomainData.DomainUUID_OnPremDemo,
+		DomainName:                   DomainData.DomainName_OnPremDemo,
+		TestInstructionContainerUUID: TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
+		TestInstructionContainerName: TestInstructionContainerName_OnPremDemo_SpecialSerialBaseContainer,
+		DropZoneUUID:                 TestInstructionDropZoneUUID_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed,
+		DropZoneName:                 TestInstructionDropZoneName_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed,
+		DropZoneDescription:          TestInstructionDropZoneDescription_OnPremDemo_TTestInstructionsInTIC_ExpectsToSucceed,
+		DropZoneMouseOver:            TestInstructionDropZoneMouseOver_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed,
+		DropZoneColor:                TestInstructionDropZoneColor_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed,
+		TestInstructionAttributeType: TI_TestCaseSetUp.TestInstructionAttributeType_OnPremDemo_TestCaseSetUp_ExpectedToBePassed,
+		TestInstructionAttributeUUID: TI_TestCaseSetUp.TestInstructionAttributeUUID_OnPremDemo_TestCaseSetUp_ExpectedToBePassed,
+		TestInstructionAttributeName: TI_TestCaseSetUp.TestInstructionAttributeName_OnPremDemo_TestCaseSetUp_ExpectedToBePassed,
+		AttributeValueAsString:       TestInstructionAttributeValueAsStringValue_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed,
+		AttributeValueUUID:           TestInstructionAttributeValueUUID_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed,
+		FirstImmatureElementUUID:     TI_TestCaseSetUp.TestInstructionUUID_OnPremDemo_TestCaseSetUp,
+		AttributeActionCommand:       TestInstructionAttributeActionCommand_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed,
+	}
+
+	TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureTestInstructionContainer = append(
+		TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureTestInstructionContainer,
+		TestInstruction_OnPremDemo_TestCaseSetUp_ExpectedToBePassed)
+
+	// DropZone 'TestInstructionsInTIC_ExpectsToSucceed'
+	// ImmatureTestInstructionInformation  - DropZone: TestInstructionsInTIC_ExpectsToSucceed, Attr: ExpectedToBePassed
+	var TestInstruction_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed *TypeAndStructs.ImmatureTestInstructionContainerMessageStruct
+	TestInstruction_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed = &TypeAndStructs.ImmatureTestInstructionContainerMessageStruct{
+		DomainUUID:                   DomainData.DomainUUID_OnPremDemo,
+		DomainName:                   DomainData.DomainName_OnPremDemo,
+		TestInstructionContainerUUID: TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
+		TestInstructionContainerName: TestInstructionContainerName_OnPremDemo_SpecialSerialBaseContainer,
+		DropZoneUUID:                 TestInstructionDropZoneUUID_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed,
+		DropZoneName:                 TestInstructionDropZoneName_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed,
+		DropZoneDescription:          TestInstructionDropZoneDescription_OnPremDemo_TTestInstructionsInTIC_ExpectsToSucceed,
+		DropZoneMouseOver:            TestInstructionDropZoneMouseOver_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed,
+		DropZoneColor:                TestInstructionDropZoneColor_OnPremDemo_TestInstructionsInTIC_ExpectsToSucceed,
+		TestInstructionAttributeType: TI_TestCaseTearDown.TestInstructionAttributeType_OnPremDemo_TestCaseTearDown_ExpectedToBePassed,
+		TestInstructionAttributeUUID: TI_TestCaseTearDown.TestInstructionAttributeUUID_OnPremDemo_TestCaseTearDown_ExpectedToBePassed,
+		TestInstructionAttributeName: TI_TestCaseTearDown.TestInstructionAttributeName_OnPremDemo_TestCaseTearDown_ExpectedToBePassed,
+		AttributeValueAsString:       TestInstructionAttributeValueAsStringValue_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed,
+		AttributeValueUUID:           TestInstructionAttributeValueUUID_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed,
+		FirstImmatureElementUUID:     TI_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown,
+		AttributeActionCommand:       TestInstructionAttributeActionCommand_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed,
+	}
+
+	TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureTestInstructionContainer = append(
+		TestInstructionContainer_OnPremDemo_SpecialSerialBase.ImmatureTestInstructionContainer,
+		TestInstruction_OnPremDemo_TestInstructionsInTIC_ExpectedToBePassed)
 
 	// ImmatureElementModelMessage - 'SpecialSerialBaseContainer' - 'TIC' in 'TIC(B11fx-TI-B12-TI-B11lx)'
 	var ImmatureElementModel_TIC *TypeAndStructs.ImmatureElementModelMessageStruct
