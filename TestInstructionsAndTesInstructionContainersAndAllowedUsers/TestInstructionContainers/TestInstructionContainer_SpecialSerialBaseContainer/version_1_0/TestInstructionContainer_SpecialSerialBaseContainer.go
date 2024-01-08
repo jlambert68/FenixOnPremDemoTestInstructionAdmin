@@ -254,7 +254,7 @@ func Initiate_TestInstructionContainer_OnPremDemo_Serial(testInstructionsAndTest
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,
 		ParentElementUUID:        TestInstructionContainerUUID_OnPremDemo_SpecialSerialBaseContainer,
-		TestCaseModelElementType: TestCaseModelElementTypes.TestCaseModelElementType_TI,
+		TestCaseModelElementType: TestCaseModelElementTypes.TestCaseModelElementType_TIx,
 		OriginalElementUUID: testInstructionsAndTestInstructionContainersMessage.TestInstructions.
 			TestInstructionsMap[TestInstruction_GeneralSetupTearDown_TestCaseTearDown.TestInstructionUUID_OnPremDemo_TestCaseTearDown].
 			TestInstructionVersions[0].TestInstructionInstance.TestInstruction.TestInstructionUUID,

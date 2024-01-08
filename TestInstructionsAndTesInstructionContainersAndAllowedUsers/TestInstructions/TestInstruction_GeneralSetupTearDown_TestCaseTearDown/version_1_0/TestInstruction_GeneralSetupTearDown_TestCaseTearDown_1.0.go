@@ -23,7 +23,7 @@ const (
 	TestInstructionDescription_OnPremDemo_TestCaseTearDown        string                                 = "TearDown the _OnPremDemos execution engine after executing TestInstructionsMap"
 	TestInstructionMouseOverText_OnPremDemo_TestCaseTearDown      string                                 = "TearDown the _OnPremDemos execution engine after executing TestInstructionsMap"
 	TestInstructionDeprecated_OnPremDemo_TestCaseTearDown         bool                                   = false
-	TestInstructionEnabled_OnPremDemo_TestCaseTearDown            bool                                   = true
+	TestInstructionEnabled_OnPremDemo_TestCaseTearDown            bool                                   = false
 	TestInstructionMajorVersionNumber_OnPremDemo_TestCaseTearDown int                                    = 1
 	TestInstructionMinorVersionNumber_OnPremDemo_TestCaseTearDown int                                    = 0
 	TestInstructionColor_OnPremDemo_TestCaseTearDown              TypeAndStructs.ColorType               = "#00ff00AA"
