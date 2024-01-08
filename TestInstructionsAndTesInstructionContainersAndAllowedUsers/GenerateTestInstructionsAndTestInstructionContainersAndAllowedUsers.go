@@ -10,6 +10,8 @@ import (
 	generalSetupTearDown_TestCaseSetUp_1_1 "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseSetUp/version_1_1"
 	generalSetupTearDown_TestCaseTearDown "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseTearDown"
 	generalSetupTearDown_TestCaseTearDown_1_0 "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseTearDown/version_1_0"
+	isDateAPublicHoliday "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_IsDateAPublicHoliday"
+	isDateAPublicHoliday_1_0 "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_IsDateAPublicHoliday/version_1_0"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/TestInstructionAndTestInstuctionContainerTypes"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/TypeAndStructs"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/shared_code"
@@ -37,6 +39,9 @@ func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremD
 
 	// GeneralSetupTearDown::TestCaseTearDown
 	generalSetupTearDown_TestCaseTearDown_1_0.Initate_TestInstruction_OnPremDemo_TestCaseTearDown()
+
+	// Standard::IsDateAPublicHoliday
+	isDateAPublicHoliday_1_0.Initate_TestInstruction_OnPremDemo_IsDateAPublicHoliday()
 
 	// Build structure for all TestInstructions & TestInstructionContainers to be sent over gRPC to Fenix Backend
 	TestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo = &TestInstructionAndTestInstuctionContainerTypes.TestInstructionsAndTestInstructionsContainersStruct{
@@ -83,6 +88,23 @@ func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremD
 							TestInstructionInstanceMinorVersion: generalSetupTearDown_TestCaseTearDown_1_0.TestInstruction_OnPremDemo_TestCaseTearDown.TestInstruction.MinorVersionNumber,
 							Deprecated:                          generalSetupTearDown_TestCaseTearDown_1_0.TestInstruction_OnPremDemo_TestCaseTearDown.TestInstruction.Deprecated,
 							Enabled:                             generalSetupTearDown_TestCaseTearDown_1_0.TestInstruction_OnPremDemo_TestCaseTearDown.TestInstruction.Enabled,
+							TestInstructionInstanceVersionHash:  shared_code.InitialValueBeforeHashed,
+						},
+					},
+					TestInstructionVersionsHash: shared_code.InitialValueBeforeHashed,
+				},
+
+				// TestInstruction 'IsDateAPublicHoliday'
+				isDateAPublicHoliday.TestInstructionUUID_OnPremDemo_IsDateAPublicHoliday: {
+					TestInstructionVersions: []*TestInstructionAndTestInstuctionContainerTypes.TestInstructionInstanceVersionStruct{
+
+						// Version 'generalSetupTearDown_TestCaseSetUp_1.0'
+						{
+							TestInstructionInstance:             isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday,
+							TestInstructionInstanceMajorVersion: isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstruction.MajorVersionNumber,
+							TestInstructionInstanceMinorVersion: isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstruction.MinorVersionNumber,
+							Deprecated:                          isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstruction.Deprecated,
+							Enabled:                             isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstruction.Enabled,
 							TestInstructionInstanceVersionHash:  shared_code.InitialValueBeforeHashed,
 						},
 					},
