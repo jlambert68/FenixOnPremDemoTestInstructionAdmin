@@ -5,7 +5,7 @@ import (
 	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/LocalExecutionMethods/FangEngineClassesAndMethods"
 	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/DomainData"
 	"github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions"
-	fixedValuesOverVersions "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_IsDateAPublicHoliday"
+	fixedValuesOverVersions "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_IsDateAPublicHoliday"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/Domains"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/TestCaseModelElementTypes"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/TestInstructionAndTestInstuctionContainerTypes"
@@ -39,7 +39,7 @@ const (
 	TestInstructionDropZoneColor_OnPremDemo_IsDateAPublicHoliday_ExpectsToSucceed       TypeAndStructs.ColorType        = "#ffff00AA"
 
 	// Attribute - 'ExpectedToBePassed'
-	TestInstructionAttributeUUID_OnPremDemo_IsDateAPublicHoliday_ExpectedToBePassed               TypeAndStructs.TestInstructionAttributeUUIDType = TestInstructions.TestInstructionAttributeName_OnPremDemo_ExpectedToBePassed // TODO fix so they use the same UUID, Can't bu done now because UUID is key in Attrubutes-table in DB .TestInstructionAttributeUUID_OnPremDemo_ExpectedToBePassed
+	TestInstructionAttributeUUID_OnPremDemo_IsDateAPublicHoliday_ExpectedToBePassed               TypeAndStructs.TestInstructionAttributeUUIDType = TestInstructions.TestInstructionAttributeUUID_OnPremDemo_ExpectedToBePassed // TODO fix so they use the same UUID, Can't bu done now because UUID is key in Attrubutes-table in DB .TestInstructionAttributeUUID_OnPremDemo_ExpectedToBePassed
 	TestInstructionAttributeName_OnPremDemo_IsDateAPublicHoliday_ExpectedToBePassed               TypeAndStructs.TestInstructionAttributeNameType = TestInstructions.TestInstructionAttributeName_OnPremDemo_ExpectedToBePassed
 	TestInstructionAttributeType_OnPremDemo_IsDateAPublicHoliday_ExpectedToBePassed               TypeAndStructs.TestInstructionAttributeTypeType = TestInstructions.TestInstructionAttributeType_OnPremDemo_ExpectedToBePassed
 	TestInstructionAttributeActionCommand_OnPremDemo_IsDateAPublicHoliday_ExpectedToBePassed      TypeAndStructs.AttributeActionCommandType       = Domains.AttributeActionCommand_USE_DROPZONE_VALUE_FOR_ATTRIBUTE
@@ -50,11 +50,17 @@ const (
 
 	// Attribute - 'HolidayDateToCheck'
 	TestInstructionAttributeUUID_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck          TypeAndStructs.TestInstructionAttributeUUIDType = "ebfeb406-75fc-4b5d-8e83-28d02d0d69d6" // TODO fix so they use the same UUID, Can't bu done now because UUID is key in Attrubutes-table in DB .TestInstructionAttributeUUID_OnPremDemo_HolidayDateToCheck
-	TestInstructionAttributeName_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck          TypeAndStructs.TestInstructionAttributeNameType = "HolidayDateToCheck"
-	TestInstructionAttributeType_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck          TypeAndStructs.TestInstructionAttributeTypeType = TestInstructions.TestInstructionAttributeTypeUUID_StandardAttributes
-	TestInstructionAttributeActionCommand_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck TypeAndStructs.AttributeActionCommandType       = Domains.AttributeActionCommand_USE_DROPZONE_VALUE_FOR_ATTRIBUTE
+	TestInstructionAttributeName_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck          TypeAndStructs.TestInstructionAttributeNameType = "Holiday Date To Check"
+	TestInstructionAttributeType_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck          TypeAndStructs.TestInstructionAttributeTypeType = "TEXTBOX"
 	TestInstructionAttributeDescription_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck   string                                          = "The date that should be check if it is a Public Holiday, use format 'YYYY-MM-DD'"
 	TestInstructionAttributeMouseOverText_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck string                                          = "The date that should be check if it is a Public Holiday, use format 'YYYY-MM-DD'"
+
+	// Attribute - 'CountryCode'
+	TestInstructionAttributeUUID_OnPremDemo_IsDateAPublicHoliday_CountryCode          TypeAndStructs.TestInstructionAttributeUUIDType = "ebfeb406-75fc-4b5d-8e83-28d02d0d69d6" // TODO fix so they use the same UUID, Can't bu done now because UUID is key in Attrubutes-table in DB .TestInstructionAttributeUUID_OnPremDemo_CountryCode
+	TestInstructionAttributeName_OnPremDemo_IsDateAPublicHoliday_CountryCode          TypeAndStructs.TestInstructionAttributeNameType = "Country Code"
+	TestInstructionAttributeType_OnPremDemo_IsDateAPublicHoliday_CountryCode          TypeAndStructs.TestInstructionAttributeTypeType = "TEXTBOX"
+	TestInstructionAttributeDescription_OnPremDemo_IsDateAPublicHoliday_CountryCode   string                                          = "The Country for which to check the Public Holiday, use format 'XX'"
+	TestInstructionAttributeMouseOverText_OnPremDemo_IsDateAPublicHoliday_CountryCode string                                          = "The Country for which to check the Public Holiday, use format 'XX'"
 )
 
 // TestInstruction_OnPremDemo_IsDateAPublicHoliday
@@ -197,11 +203,38 @@ func Initate_TestInstruction_OnPremDemo_IsDateAPublicHoliday() *TestInstructionA
 		TestInstructionAttributeVisibleInTestCaseArea: false,
 		TestInstructionAttributeIsDeprecated:          false,
 		TestInstructionAttributeInputMask:             ".",
-		TestInstructionAttributeType:                  TestInstructionAttributeType_OnPremDemo_IsDateAPublicHoliday_ExpectedToBePassed,
+		TestInstructionAttributeType:                  TestInstructionAttributeType_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck,
 	}
 	TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstructionAttribute = append(
 		TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstructionAttribute,
-		TestInstructionAttribute_OnPremDemo_IsDateAPublicHoliday_ExpectedToBePassed)
+		TestInstructionAttribute_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck)
+
+	// TestInstruction Attribute - 'CountryCode'
+	var TestInstructionAttribute_OnPremDemo_IsDateAPublicHoliday_CountryCode *TypeAndStructs.TestInstructionAttributeStruct
+	TestInstructionAttribute_OnPremDemo_IsDateAPublicHoliday_CountryCode = &TypeAndStructs.TestInstructionAttributeStruct{
+		DomainUUID:                                    DomainData.DomainUUID_OnPremDemo,
+		DomainName:                                    DomainData.DomainName_OnPremDemo,
+		TestInstructionUUID:                           TestInstructionUUID_OnPremDemo_IsDateAPublicHoliday,
+		TestInstructionName:                           TestInstructionName_OnPremDemo_IsDateAPublicHoliday,
+		TestInstructionAttributeUUID:                  TestInstructionAttributeUUID_OnPremDemo_IsDateAPublicHoliday_CountryCode,
+		TestInstructionAttributeName:                  TestInstructionAttributeName_OnPremDemo_IsDateAPublicHoliday_CountryCode,
+		TestInstructionAttributeDescription:           TestInstructionAttributeDescription_OnPremDemo_IsDateAPublicHoliday_CountryCode,
+		TestInstructionAttributeMouseOver:             TestInstructionAttributeMouseOverText_OnPremDemo_IsDateAPublicHoliday_CountryCode,
+		TestInstructionAttributeTypeUUID:              TestInstructions.TestInstructionAttributeTypeUUID_OnPremDemo_Standard,
+		TestInstructionAttributeTypeName:              TestInstructions.TestInstructionAttributeTypeName_OnPremDemo_Standard,
+		TestInstructionAttributeValueAsString:         Domains.TestInstructionAttributeValueAsStringValue_NO_VALUE,
+		TestInstructionAttributeValueUUID:             Domains.TestInstructionAttributeValueUUID_NO_VALUE,
+		TestInstructionAttributeVisible:               true,
+		TestInstructionAttributeEnabled:               true,
+		TestInstructionAttributeMandatory:             true,
+		TestInstructionAttributeVisibleInTestCaseArea: false,
+		TestInstructionAttributeIsDeprecated:          false,
+		TestInstructionAttributeInputMask:             ".",
+		TestInstructionAttributeType:                  TestInstructionAttributeType_OnPremDemo_IsDateAPublicHoliday_CountryCode,
+	}
+	TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstructionAttribute = append(
+		TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstructionAttribute,
+		TestInstructionAttribute_OnPremDemo_IsDateAPublicHoliday_CountryCode)
 
 	// Add FangEngine relation for Attribute - 'ExpectedToBePassed'
 	// Nothing here
