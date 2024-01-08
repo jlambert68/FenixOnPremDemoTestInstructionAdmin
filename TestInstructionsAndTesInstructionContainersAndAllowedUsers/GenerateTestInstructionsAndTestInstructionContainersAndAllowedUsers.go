@@ -98,7 +98,7 @@ func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremD
 				isDateAPublicHoliday.TestInstructionUUID_OnPremDemo_IsDateAPublicHoliday: {
 					TestInstructionVersions: []*TestInstructionAndTestInstuctionContainerTypes.TestInstructionInstanceVersionStruct{
 
-						// Version 'generalSetupTearDown_TestCaseSetUp_1.0'
+						// Version 'isDateAPublicHoliday_1_0'
 						{
 							TestInstructionInstance:             isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday,
 							TestInstructionInstanceMajorVersion: isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstruction.MajorVersionNumber,

@@ -56,7 +56,7 @@ const (
 	TestInstructionAttributeMouseOverText_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck string                                          = "The date that should be check if it is a Public Holiday, use format 'YYYY-MM-DD'"
 
 	// Attribute - 'CountryCode'
-	TestInstructionAttributeUUID_OnPremDemo_IsDateAPublicHoliday_CountryCode          TypeAndStructs.TestInstructionAttributeUUIDType = "ebfeb406-75fc-4b5d-8e83-28d02d0d69d6" // TODO fix so they use the same UUID, Can't bu done now because UUID is key in Attrubutes-table in DB .TestInstructionAttributeUUID_OnPremDemo_CountryCode
+	TestInstructionAttributeUUID_OnPremDemo_IsDateAPublicHoliday_CountryCode          TypeAndStructs.TestInstructionAttributeUUIDType = "371349ff-787d-4031-9e2e-4a937703cc0c" // TODO fix so they use the same UUID, Can't bu done now because UUID is key in Attrubutes-table in DB .TestInstructionAttributeUUID_OnPremDemo_CountryCode
 	TestInstructionAttributeName_OnPremDemo_IsDateAPublicHoliday_CountryCode          TypeAndStructs.TestInstructionAttributeNameType = "Country Code"
 	TestInstructionAttributeType_OnPremDemo_IsDateAPublicHoliday_CountryCode          TypeAndStructs.TestInstructionAttributeTypeType = "TEXTBOX"
 	TestInstructionAttributeDescription_OnPremDemo_IsDateAPublicHoliday_CountryCode   string                                          = "The Country for which to check the Public Holiday, use format 'XX'"
