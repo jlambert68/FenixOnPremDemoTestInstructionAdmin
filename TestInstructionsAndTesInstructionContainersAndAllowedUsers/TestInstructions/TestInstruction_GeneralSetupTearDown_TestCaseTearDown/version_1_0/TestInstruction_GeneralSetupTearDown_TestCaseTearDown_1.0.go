@@ -20,8 +20,8 @@ const (
 	TestInstructionName_OnPremDemo_TestCaseTearDown               TypeAndStructs.TestInstructionNameType = "TestCaseTearDown"
 	TestInstructionTypeUUID_OnPremDemo_TestCaseTearDown                                                  = TestInstructions.TestInstructionTypeUUID_OnPremDemo_GeneralSetUpTearDown
 	TestInstructionTypeName_OnPremDemo_TestCaseTearDown                                                  = TestInstructions.TestInstructionTypeName_OnPremDemo_GeneralSetUpTearDown
-	TestInstructionDescription_OnPremDemo_TestCaseTearDown        string                                 = "TearDown the _OnPremDemos execution engine after executing TestInstructionsMap"
-	TestInstructionMouseOverText_OnPremDemo_TestCaseTearDown      string                                 = "TearDown the _OnPremDemos execution engine after executing TestInstructionsMap"
+	TestInstructionDescription_OnPremDemo_TestCaseTearDown        string                                 = "TestCaseTearDown, runs last for every TestCase for OnPrem-demo"
+	TestInstructionMouseOverText_OnPremDemo_TestCaseTearDown      string                                 = "TestCaseTearDown, runs last for every TestCase for OnPrem-demo"
 	TestInstructionDeprecated_OnPremDemo_TestCaseTearDown         bool                                   = false
 	TestInstructionEnabled_OnPremDemo_TestCaseTearDown            bool                                   = false
 	TestInstructionMajorVersionNumber_OnPremDemo_TestCaseTearDown int                                    = 1

@@ -18,10 +18,10 @@ const (
 	// *** TestInstruction *** 'IsDateAPublicHoliday'
 	TestInstructionUUID_OnPremDemo_IsDateAPublicHoliday               TypeAndStructs.OriginalElementUUIDType = fixedValuesOverVersions.TestInstructionUUID_OnPremDemo_IsDateAPublicHoliday
 	TestInstructionName_OnPremDemo_IsDateAPublicHoliday               TypeAndStructs.TestInstructionNameType = "IsDateAPublicHoliday"
-	TestInstructionTypeUUID_OnPremDemo_IsDateAPublicHoliday                                                  = TestInstructions.TestInstructionTypeUUID_OnPremDemo_GeneralSetUpTearDown
-	TestInstructionTypeName_OnPremDemo_IsDateAPublicHoliday                                                  = TestInstructions.TestInstructionTypeName_OnPremDemo_GeneralSetUpTearDown
-	TestInstructionDescription_OnPremDemo_IsDateAPublicHoliday        string                                 = "TearDown the _OnPremDemos execution engine after executing TestInstructionsMap"
-	TestInstructionMouseOverText_OnPremDemo_IsDateAPublicHoliday      string                                 = "TearDown the _OnPremDemos execution engine after executing TestInstructionsMap"
+	TestInstructionTypeUUID_OnPremDemo_IsDateAPublicHoliday                                                  = TestInstructions.TestInstructionTypeUUID_OnPremDemo_Standard
+	TestInstructionTypeName_OnPremDemo_IsDateAPublicHoliday                                                  = TestInstructions.TestInstructionTypeName_OnPremDemo_Standard
+	TestInstructionDescription_OnPremDemo_IsDateAPublicHoliday        string                                 = "This TestInstruction validates if a date is public holiday or not"
+	TestInstructionMouseOverText_OnPremDemo_IsDateAPublicHoliday      string                                 = "This TestInstruction validates if a date is public holiday or not"
 	TestInstructionDeprecated_OnPremDemo_IsDateAPublicHoliday         bool                                   = false
 	TestInstructionEnabled_OnPremDemo_IsDateAPublicHoliday            bool                                   = true
 	TestInstructionMajorVersionNumber_OnPremDemo_IsDateAPublicHoliday int                                    = 1

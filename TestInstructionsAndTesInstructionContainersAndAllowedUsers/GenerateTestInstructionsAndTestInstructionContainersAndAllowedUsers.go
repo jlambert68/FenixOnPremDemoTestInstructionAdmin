@@ -12,6 +12,8 @@ import (
 	generalSetupTearDown_TestCaseTearDown_1_0 "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_GeneralSetupTearDown_TestCaseTearDown/version_1_0"
 	isDateAPublicHoliday "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_IsDateAPublicHoliday"
 	isDateAPublicHoliday_1_0 "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_IsDateAPublicHoliday/version_1_0"
+	isServerAlive "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_IsServerAlive"
+	isServerAlive_v_1_0 "github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin/TestInstructionsAndTesInstructionContainersAndAllowedUsers/TestInstructions/TestInstruction_IsServerAlive/version_1_0"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/TestInstructionAndTestInstuctionContainerTypes"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/TypeAndStructs"
 	"github.com/jlambert68/FenixTestInstructionsAdminShared/shared_code"
@@ -42,6 +44,9 @@ func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremD
 
 	// Standard::IsDateAPublicHoliday
 	isDateAPublicHoliday_1_0.Initate_TestInstruction_OnPremDemo_IsDateAPublicHoliday()
+
+	// Standard::IsServerAlive
+	isServerAlive_v_1_0.Initate_TestInstruction_OnPremDemo_IsServerAlive()
 
 	// Build structure for all TestInstructions & TestInstructionContainers to be sent over gRPC to Fenix Backend
 	TestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo = &TestInstructionAndTestInstuctionContainerTypes.TestInstructionsAndTestInstructionsContainersStruct{
@@ -105,6 +110,23 @@ func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremD
 							TestInstructionInstanceMinorVersion: isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstruction.MinorVersionNumber,
 							Deprecated:                          isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstruction.Deprecated,
 							Enabled:                             isDateAPublicHoliday_1_0.TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstruction.Enabled,
+							TestInstructionInstanceVersionHash:  shared_code.InitialValueBeforeHashed,
+						},
+					},
+					TestInstructionVersionsHash: shared_code.InitialValueBeforeHashed,
+				},
+
+				// TestInstruction 'IsServerAlive'
+				isServerAlive.TestInstructionUUID_OnPremDemo_IsServerAlive: {
+					TestInstructionVersions: []*TestInstructionAndTestInstuctionContainerTypes.TestInstructionInstanceVersionStruct{
+
+						// Version 'IsServerAlive_1_0'
+						{
+							TestInstructionInstance:             isServerAlive_v_1_0.TestInstruction_OnPremDemo_IsServerAlive,
+							TestInstructionInstanceMajorVersion: isServerAlive_v_1_0.TestInstruction_OnPremDemo_IsServerAlive.TestInstruction.MajorVersionNumber,
+							TestInstructionInstanceMinorVersion: isServerAlive_v_1_0.TestInstruction_OnPremDemo_IsServerAlive.TestInstruction.MinorVersionNumber,
+							Deprecated:                          isServerAlive_v_1_0.TestInstruction_OnPremDemo_IsServerAlive.TestInstruction.Deprecated,
+							Enabled:                             isServerAlive_v_1_0.TestInstruction_OnPremDemo_IsServerAlive.TestInstruction.Enabled,
 							TestInstructionInstanceVersionHash:  shared_code.InitialValueBeforeHashed,
 						},
 					},

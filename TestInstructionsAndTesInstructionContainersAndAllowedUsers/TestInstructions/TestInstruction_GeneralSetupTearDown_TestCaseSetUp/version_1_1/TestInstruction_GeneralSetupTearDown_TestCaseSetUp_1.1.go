@@ -20,8 +20,8 @@ const (
 	TestInstructionName_OnPremDemo_TestCaseSetUp               TypeAndStructs.TestInstructionNameType = "TestCaseSetUp"
 	TestInstructionTypeUUID_OnPremDemo_TestCaseSetUp                                                  = TestInstructions.TestInstructionTypeUUID_OnPremDemo_GeneralSetUpTearDown
 	TestInstructionTypeName_OnPremDemo_TestCaseSetUp                                                  = TestInstructions.TestInstructionTypeName_OnPremDemo_GeneralSetUpTearDown
-	TestInstructionDescription_OnPremDemo_TestCaseSetUp        string                                 = "Initiate _OnPremDemos execution engine to be able to execute TestInstructionsMap"
-	TestInstructionMouseOverText_OnPremDemo_TestCaseSetUp      string                                 = "Initiate _OnPremDemos execution engine to be able to execute TestInstructionsMap"
+	TestInstructionDescription_OnPremDemo_TestCaseSetUp        string                                 = "TestCaseSetUp, runs first for every TestCase for OnPrem-demo"
+	TestInstructionMouseOverText_OnPremDemo_TestCaseSetUp      string                                 = "TestCaseSetUp, runs first for every TestCase for OnPrem-demo"
 	TestInstructionDeprecated_OnPremDemo_TestCaseSetUp         bool                                   = false
 	TestInstructionEnabled_OnPremDemo_TestCaseSetUp            bool                                   = false // Is not shown up in tree of available building blocks, but can be used in pre-create TestInstructionContainers
 	TestInstructionMajorVersionNumber_OnPremDemo_TestCaseSetUp int                                    = 1
