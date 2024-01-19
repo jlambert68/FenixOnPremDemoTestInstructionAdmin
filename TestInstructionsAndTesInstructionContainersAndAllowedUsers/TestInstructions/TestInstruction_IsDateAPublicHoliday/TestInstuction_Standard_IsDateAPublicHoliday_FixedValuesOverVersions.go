@@ -1,4 +1,4 @@
-package TestInstruction_GeneralSetupTearDown_IsDateAPublicHoliday
+package TestInstruction_Standard_IsDateAPublicHoliday
 
 import "github.com/jlambert68/FenixTestInstructionsAdminShared/TypeAndStructs"
 
