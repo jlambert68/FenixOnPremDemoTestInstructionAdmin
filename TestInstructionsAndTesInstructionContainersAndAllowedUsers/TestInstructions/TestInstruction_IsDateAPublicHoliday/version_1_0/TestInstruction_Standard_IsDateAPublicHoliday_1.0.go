@@ -52,8 +52,8 @@ const (
 	TestInstructionAttributeUUID_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck          TypeAndStructs.TestInstructionAttributeUUIDType = "ebfeb406-75fc-4b5d-8e83-28d02d0d69d6" // TODO fix so they use the same UUID, Can't bu done now because UUID is key in Attrubutes-table in DB .TestInstructionAttributeUUID_OnPremDemo_HolidayDateToCheck
 	TestInstructionAttributeName_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck          TypeAndStructs.TestInstructionAttributeNameType = "Holiday Date To Check"
 	TestInstructionAttributeType_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck          TypeAndStructs.TestInstructionAttributeTypeType = "TEXTBOX"
-	TestInstructionAttributeDescription_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck   string                                          = "The date that should be check if it is a Public Holiday, use format 'YYYY-MM-DD'"
-	TestInstructionAttributeMouseOverText_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck string                                          = "The date that should be check if it is a Public Holiday, use format 'YYYY-MM-DD'"
+	TestInstructionAttributeDescription_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck   string                                          = "The date that should be checked if it is a Public Holiday, use format 'YYYY-MM-DD'"
+	TestInstructionAttributeMouseOverText_OnPremDemo_IsDateAPublicHoliday_HolidayDateToCheck string                                          = "The date that should be checked if it is a Public Holiday, use format 'YYYY-MM-DD'"
 
 	// Attribute - 'CountryCode'
 	TestInstructionAttributeUUID_OnPremDemo_IsDateAPublicHoliday_CountryCode          TypeAndStructs.TestInstructionAttributeUUIDType = "371349ff-787d-4031-9e2e-4a937703cc0c" // TODO fix so they use the same UUID, Can't bu done now because UUID is key in Attrubutes-table in DB .TestInstructionAttributeUUID_OnPremDemo_CountryCode
@@ -94,6 +94,8 @@ func Initate_TestInstruction_OnPremDemo_IsDateAPublicHoliday() *TestInstructionA
 	TestInstruction_OnPremDemo_IsDateAPublicHoliday.TestInstruction = &TypeAndStructs.TestInstructionStruct{
 		DomainUUID:                   DomainData.DomainUUID_OnPremDemo,
 		DomainName:                   DomainData.DomainName_OnPremDemo,
+		ExecutionDomainUUID:          DomainData.ExecutionDomainUUID_OnPremDemo_InGCP,
+		ExecutionDomainName:          DomainData.ExecutionDomainName_OnPremDemo_InGCP,
 		TestInstructionUUID:          TestInstructionUUID_OnPremDemo_IsDateAPublicHoliday,
 		TestInstructionName:          TestInstructionName_OnPremDemo_IsDateAPublicHoliday,
 		TestInstructionTypeUUID:      TestInstructionTypeUUID_OnPremDemo_IsDateAPublicHoliday,
@@ -111,6 +113,8 @@ func Initate_TestInstruction_OnPremDemo_IsDateAPublicHoliday() *TestInstructionA
 	TestInstruction_OnPremDemo_IsDateAPublicHoliday.BasicTestInstructionInformation = &TypeAndStructs.BasicTestInstructionInformationStruct{
 		DomainUUID:                   DomainData.DomainUUID_OnPremDemo,
 		DomainName:                   DomainData.DomainName_OnPremDemo,
+		ExecutionDomainUUID:          DomainData.ExecutionDomainUUID_OnPremDemo_InGCP,
+		ExecutionDomainName:          DomainData.ExecutionDomainName_OnPremDemo_InGCP,
 		TestInstructionUUID:          TestInstructionUUID_OnPremDemo_IsDateAPublicHoliday,
 		TestInstructionName:          TestInstructionName_OnPremDemo_IsDateAPublicHoliday,
 		TestInstructionTypeUUID:      TestInstructionTypeUUID_OnPremDemo_IsDateAPublicHoliday,

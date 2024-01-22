@@ -93,6 +93,8 @@ func Initate_TestInstruction_OnPremDemo_TestCaseTearDown() *TestInstructionAndTe
 	TestInstruction_OnPremDemo_TestCaseTearDown.TestInstruction = &TypeAndStructs.TestInstructionStruct{
 		DomainUUID:                   DomainData.DomainUUID_OnPremDemo,
 		DomainName:                   DomainData.DomainName_OnPremDemo,
+		ExecutionDomainUUID:          DomainData.ExecutionDomainUUID_OnPremDemo_OnPrem,
+		ExecutionDomainName:          DomainData.ExecutionDomainName_OnPremDemo_OnPrem,
 		TestInstructionUUID:          TestInstructionUUID_OnPremDemo_TestCaseTearDown,
 		TestInstructionName:          TestInstructionName_OnPremDemo_TestCaseTearDown,
 		TestInstructionTypeUUID:      TestInstructionTypeUUID_OnPremDemo_TestCaseTearDown,
@@ -110,6 +112,8 @@ func Initate_TestInstruction_OnPremDemo_TestCaseTearDown() *TestInstructionAndTe
 	TestInstruction_OnPremDemo_TestCaseTearDown.BasicTestInstructionInformation = &TypeAndStructs.BasicTestInstructionInformationStruct{
 		DomainUUID:                   DomainData.DomainUUID_OnPremDemo,
 		DomainName:                   DomainData.DomainName_OnPremDemo,
+		ExecutionDomainUUID:          DomainData.ExecutionDomainUUID_OnPremDemo_OnPrem,
+		ExecutionDomainName:          DomainData.ExecutionDomainName_OnPremDemo_OnPrem,
 		TestInstructionUUID:          TestInstructionUUID_OnPremDemo_TestCaseTearDown,
 		TestInstructionName:          TestInstructionName_OnPremDemo_TestCaseTearDown,
 		TestInstructionTypeUUID:      TestInstructionTypeUUID_OnPremDemo_TestCaseTearDown,

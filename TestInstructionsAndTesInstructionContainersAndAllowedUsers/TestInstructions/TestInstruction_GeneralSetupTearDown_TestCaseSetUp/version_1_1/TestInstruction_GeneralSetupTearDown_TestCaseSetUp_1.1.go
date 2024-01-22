@@ -89,6 +89,8 @@ func Initate_TestInstruction_OnPremDemo_TestCaseSetUp() *TestInstructionAndTestI
 	TestInstruction_OnPremDemo_TestCaseSetUp.TestInstruction = &TypeAndStructs.TestInstructionStruct{
 		DomainUUID:                   DomainData.DomainUUID_OnPremDemo,
 		DomainName:                   DomainData.DomainName_OnPremDemo,
+		ExecutionDomainUUID:          DomainData.ExecutionDomainUUID_OnPremDemo_OnPrem,
+		ExecutionDomainName:          DomainData.ExecutionDomainName_OnPremDemo_OnPrem,
 		TestInstructionUUID:          TestInstructionUUID_OnPremDemo_TestCaseSetUp,
 		TestInstructionName:          TestInstructionName_OnPremDemo_TestCaseSetUp,
 		TestInstructionTypeUUID:      TestInstructionTypeUUID_OnPremDemo_TestCaseSetUp,
@@ -106,6 +108,8 @@ func Initate_TestInstruction_OnPremDemo_TestCaseSetUp() *TestInstructionAndTestI
 	TestInstruction_OnPremDemo_TestCaseSetUp.BasicTestInstructionInformation = &TypeAndStructs.BasicTestInstructionInformationStruct{
 		DomainUUID:                   DomainData.DomainUUID_OnPremDemo,
 		DomainName:                   DomainData.DomainName_OnPremDemo,
+		ExecutionDomainUUID:          DomainData.ExecutionDomainUUID_OnPremDemo_OnPrem,
+		ExecutionDomainName:          DomainData.ExecutionDomainName_OnPremDemo_OnPrem,
 		TestInstructionUUID:          TestInstructionUUID_OnPremDemo_TestCaseSetUp,
 		TestInstructionName:          TestInstructionName_OnPremDemo_TestCaseSetUp,
 		TestInstructionTypeUUID:      TestInstructionTypeUUID_OnPremDemo_TestCaseSetUp,

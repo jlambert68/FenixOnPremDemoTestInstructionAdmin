@@ -3,8 +3,8 @@ module github.com/jlambert68/FenixOnPremDemoTestInstructionAdmin
 go 1.21
 
 require (
-	github.com/jlambert68/FenixGrpcApi v0.0.0-20240103122135-2db908f6e1ac
-	github.com/jlambert68/FenixTestInstructionsAdminShared v0.0.0-20240103135859-01e613300ea3
+	github.com/jlambert68/FenixGrpcApi v0.0.0-20240122123718-97a7a27310aa
+	github.com/jlambert68/FenixTestInstructionsAdminShared v0.0.0-20240122131744-0669c696bbf0
 )
 
 require (
