@@ -28,7 +28,7 @@ func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremD
 	var err error
 
 	// Load Allowed users from json-file
-	err = shared_code.ImportAllowedUsersFromFile()
+	err = shared_code.ParseAllowedUsersFromEmbeddedFile(allowedUsers)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
