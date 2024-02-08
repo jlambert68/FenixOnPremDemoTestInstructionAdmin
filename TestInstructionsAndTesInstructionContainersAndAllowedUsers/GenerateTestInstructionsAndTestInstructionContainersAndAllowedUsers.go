@@ -23,7 +23,7 @@ import (
 
 var TestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo *TestInstructionAndTestInstuctionContainerTypes.TestInstructionsAndTestInstructionsContainersStruct
 
-func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo() {
+func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremDemo(allowedUsers []byte) {
 
 	var err error
 
@@ -33,6 +33,13 @@ func GenerateTestInstructionsAndTestInstructionContainersAndAllowedUsers_OnPremD
 		fmt.Println(err)
 		os.Exit(1)
 	}
+
+	// Set AllUsersAuthorizationRights and initial Hash-value
+	shared_code.AllowedUsersLoadFromJsonFile.AllUsersAuthorizationRights = &TestInstructionAndTestInstuctionContainerTypes.AllUsersAuthorizationRightsStruct{
+		AllUsersCanListAndViewTestCaseHavingTIandTICFromThisDomain:  true,
+		AllUsersCanBuildAndSaveTestCaseHavingTIandTICFromThisDomain: true,
+	}
+	shared_code.AllowedUsersLoadFromJsonFile.AllowedUsersHash = shared_code.InitialValueBeforeHashed
 
 	// Generate TestInstructions
 	// GeneralSetupTearDown::TestCaseSetUp
